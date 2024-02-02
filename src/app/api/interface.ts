@@ -38,10 +38,10 @@ type menuItem = {
   list: InterfaceItem[];
 };
 
-type menuList = menuItem[];
+export type MenuList = menuItem[];
 
 export const getMenu = (params: { project_id: number }) => {
-  return request<menuList>({
+  return request<MenuList>({
     apiPath: "/interface/list_menu",
     method: "GET",
     params: params,
